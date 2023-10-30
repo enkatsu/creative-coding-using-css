@@ -1,0 +1,120 @@
+a {
+  color: black;
+  background-color: white;
+}
+a:hover {
+  color: white;
+  background-color: magenta;
+}
+
+.top {
+  position: absolute;
+  z-index: 999;
+}
+
+@property --time {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes time {
+  0% {
+    --time: 0deg;
+  }
+  100% {
+    --time: 360deg;
+  }
+}
+body {
+  background: black;
+  color: white;
+}
+
+#div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+span {
+  --time: 0deg;
+  animation: time linear 5s infinite;
+  font-size: 32px;
+  transition: font-size 0.3s;
+  user-select: none;
+  position: absolute;
+}
+
+#div > span:nth-child(12n+1) {
+  transform: translateX(calc(0.8660254038 * min(40vh, 40vw) + 50vw)) translateY(calc(0.5 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(30deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+2) {
+  transform: translateX(calc(0.5 * min(40vh, 40vw) + 50vw)) translateY(calc(0.8660254038 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(60deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+3) {
+  transform: translateX(calc(0 * min(40vh, 40vw) + 50vw)) translateY(calc(1 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(90deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+4) {
+  transform: translateX(calc(-0.5 * min(40vh, 40vw) + 50vw)) translateY(calc(0.8660254038 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(120deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+5) {
+  transform: translateX(calc(-0.8660254038 * min(40vh, 40vw) + 50vw)) translateY(calc(0.5 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(150deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+6) {
+  transform: translateX(calc(-1 * min(40vh, 40vw) + 50vw)) translateY(calc(0 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(180deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+7) {
+  transform: translateX(calc(-0.8660254038 * min(40vh, 40vw) + 50vw)) translateY(calc(-0.5 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(210deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+8) {
+  transform: translateX(calc(-0.5 * min(40vh, 40vw) + 50vw)) translateY(calc(-0.8660254038 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(240deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+9) {
+  transform: translateX(calc(0 * min(40vh, 40vw) + 50vw)) translateY(calc(-1 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(270deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+10) {
+  transform: translateX(calc(0.5 * min(40vh, 40vw) + 50vw)) translateY(calc(-0.8660254038 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(300deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+11) {
+  transform: translateX(calc(0.8660254038 * min(40vh, 40vw) + 50vw)) translateY(calc(-0.5 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(330deg + var(--time)), 100%, 50%);
+}
+
+#div > span:nth-child(12n+12) {
+  transform: translateX(calc(1 * min(40vh, 40vw) + 50vw)) translateY(calc(0 * min(40vh, 40vw) + 50vh));
+  color: hsl(calc(360deg + var(--time)), 100%, 50%);
+}
+
+/*# sourceMappingURL=3.css.map */
