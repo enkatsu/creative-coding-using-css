@@ -1,0 +1,13 @@
+a {
+    color: black;
+    background-color: white;
+    &:hover {
+        color: white;
+        background-color: magenta;
+    }
+}
+
+.top {
+    position: absolute;
+    z-index: 999;
+}

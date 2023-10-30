@@ -1,0 +1,22 @@
+a {
+  color: black;
+  background-color: white;
+}
+a:hover {
+  color: white;
+  background-color: magenta;
+}
+
+.top {
+  position: absolute;
+  z-index: 999;
+}
+
+body {
+  background-color: black;
+}
+body ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=index.css.map */

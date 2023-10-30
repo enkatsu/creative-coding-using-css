@@ -1,0 +1,107 @@
+a {
+  color: black;
+  background-color: white;
+}
+a:hover {
+  color: white;
+  background-color: magenta;
+}
+
+.top {
+  position: absolute;
+  z-index: 999;
+}
+
+@property --time {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes time {
+  0% {
+    --time: 0deg;
+  }
+  100% {
+    --time: 360deg;
+  }
+}
+body {
+  background: black;
+  color: white;
+}
+
+#div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+span {
+  --time: 0deg;
+  animation: time linear 2s infinite;
+  font-size: 32px;
+  transition: font-size 0.3s;
+  user-select: none;
+}
+
+#div > span:nth-child(12n+1) {
+  transform: translateY(calc(cos(30deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+2) {
+  transform: translateY(calc(cos(60deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+3) {
+  transform: translateY(calc(cos(90deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+4) {
+  transform: translateY(calc(cos(120deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+5) {
+  transform: translateY(calc(cos(150deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+6) {
+  transform: translateY(calc(cos(180deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+7) {
+  transform: translateY(calc(cos(210deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+8) {
+  transform: translateY(calc(cos(240deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+9) {
+  transform: translateY(calc(cos(270deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+10) {
+  transform: translateY(calc(cos(300deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+11) {
+  transform: translateY(calc(cos(330deg + var(--time)) * 10vh + 50vh));
+}
+
+#div > span:nth-child(12n+12) {
+  transform: translateY(calc(cos(360deg + var(--time)) * 10vh + 50vh));
+}
+
+/*# sourceMappingURL=1.css.map */
